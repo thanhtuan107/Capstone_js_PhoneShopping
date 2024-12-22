@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/css/output.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="./img/logo.jpg" class="h-14 md:h-20" alt="Logo Mobile" />
+            <span
+              class="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Mobile</span
+            >
+          </a>
+
+          <div
+            class="items-center justify-betwee w-full md:flex md:w-auto"
+            id="navbar-cta"
+          >
+            <ul
+              class="flex justify-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownHoverButton"
+                  data-dropdown-toggle="dropdownHover"
+                  data-dropdown-trigger="hover"
+                  class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Products
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownHover"
+                  class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        value="Samsung"
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Samsung</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        value="Iphone"
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Iphone</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex space-x-3 md:space-x-0 rtl:space-x-reverse p-2 rounded-full hover:text-red-600"
+          >
+            <div class="mr-5 relative">
+              <button onclick="showCart()" class="btn btn-danger">
+                <i class="fa-solid fa-cart-shopping self-center mr-2"></i>
+                <p
+                  class="self-center font-semibold whitespace-nowrap dark:text-white inline-block"
+                >
+                  Carts
+                </p>
+                <span
+                  id="cart__count"
+                  class="font-bold text-red-500 absolute"
+                  style="top: -14px; left: 5px"
+                ></span>
+              </button>
+            </div>
+            <!-- <div>
+              <a href="#"
+                ><i class="fa-solid fa-circle-user">
+                  <span
+                    class="self-center font-semibold whitespace-nowrap dark:text-white"
+                    >Admin</span
+                  >
+                </i></a
+              >
+            </div> -->
+            <div>
+              <button onclick="switchToAdminInterface()" class="btn btn-secondary">Switch to Admin Interface</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Carousel -->
+    <section id="carousel" class="mx-auto max-w-screen-xl">
+      <div id="default-carousel" class="relative" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative w-full overflow-hidden rounded-lg h-64 lg:h-5/6">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./img/banner1.jpg" class="h-full w-full" alt="banner1" />
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./img/banner2.jpg" class="h-full w-full" alt="banner2" />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./img/banner3.jpg" class="h-full w-full" alt="..." />
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./img/banner4.jpg" class="h-full w-full" alt="..." />
+          </div>
+          <!-- Item 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./img/banner5.jpg" class="h-full w-full" alt="..." />
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div
+          class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"
+          ></button>
+        </div>
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Product -->
+    <section id="products" class="mx-auto max-w-screen-xl pt-10 px-5">
+      <h1 class="text-center text-3xl mb-10">Products</h1>
+      <select class="custom-select mb-10" id="selLoai">
+        <option value="all" selected="">Tất cả</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Iphone">Iphone</option>
+      </select>
+
+      <div
+        id="mainProduct"
+        class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4"
+      ></div>
+    </section>
+
+    <section id="cart" class="cart relative mx-auto text-center z-50 hidden">
+      <!-- <h2 class="text-3xl mb-10">Cart</h2>
+      <form action="">
+        <table class="w-full">
+          <thead>
+            <tr>
+              <th class="text-left">Sản phẩm</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Chọn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="flex items-center">
+                <div id="cart__name"><p></p></div>
+              </td>
+              <td>
+                <p><span>3000</span></p>
+              </td>
+              <td>
+                <input
+                  type="number"
+                  value="1"
+                  min="0"
+                  style="width: 50px; outline: none"
+                />
+              </td>
+              <td><button class="btn btn-success">Xóa</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form> -->
+      <div>
+        <h2
+          class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl"
+        >
+          Shopping Cart
+        </h2>
+        <div id="mainCart"></div>
+        <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
+          <div
+            class="w-full space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6"
+          >
+            <p class="text-xl font-semibold text-gray-900 dark:text-white">
+              Order summary
+            </p>
+
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <dl class="flex items-center justify-between gap-4">
+                  <dt
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Original price
+                  </dt>
+                  <dd
+                    id="cart__giaTT"
+                    class="text-base font-medium text-gray-900 dark:text-white"
+                  >
+                    $0
+                  </dd>
+                </dl>
+
+                <dl class="flex items-center justify-between gap-4">
+                  <dt
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Số lượng:
+                  </dt>
+                  <dd
+                    id="cart__soluong"
+                    class="text-base font-medium text-gray-900 dark:text-white"
+                  >
+                    0
+                  </dd>
+                </dl>
+              </div>
+
+              <dl
+                class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700"
+              >
+                <dt class="text-base font-bold text-gray-900 dark:text-white">
+                  Tổng:
+                </dt>
+                <dd
+                  id="cart__tong"
+                  class="text-base font-bold text-gray-900 dark:text-white"
+                >
+                  $0
+                </dd>
+              </dl>
+            </div>
+            <div>
+              <button
+                onclick="thanhtoan()"
+                type="button"
+                class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+              >
+                Thanh toán
+              </button>
+            </div>
+
+            <div class="flex items-center justify-center gap-2">
+              <span
+                class="text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                or
+              </span>
+              <button
+                onclick="closeCart()"
+                class="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"
+              >
+                Continue Shopping
+                <svg
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 12H5m14 0-4 4m4-4-4-4"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"
+      integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="module" src="./controller/main.js"></script>
+    <script type="module" src="./controller/main_cart.js"></script>
+    <script>
+      function switchToAdminInterface() {
+        window.location.href = './../admin/app/views/index.html';
+      }
+    </script>
+  </body>
+</html>
