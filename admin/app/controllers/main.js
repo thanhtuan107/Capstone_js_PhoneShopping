@@ -178,18 +178,17 @@ const validateModalForm = () => {
 };
 
 const handleDelete = (id) => {
-   const promise =  api.deleteDataById(id);
+   const promise = api.deleteDataById(id);
    promise
         .then((result) => {
-            console.log(result.data)
+            console.log(result.data);
             alert(`Delete ${result.data.id} success!!`);
-            //renderProduct(result.data);
             getListProduct();
         })
         .catch((error) => {
             console.log(error);
         });
-}
+};
 window.handleDelete = handleDelete;
 
 getListProduct();
